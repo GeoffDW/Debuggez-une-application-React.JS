@@ -18,7 +18,7 @@ const Form = ({ onSuccess, onError }) => {
         setSending(false);
       } catch (err) {
         setSending(false);
-        onError(err);
+        onSuccess(err);
       }
     },
     [onSuccess, onError]
