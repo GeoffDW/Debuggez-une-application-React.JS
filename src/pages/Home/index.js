@@ -16,7 +16,7 @@ const Page = () => {
 
   const { data } = useData();
   const last = 
-  data && data.event && data.event.length > 0
+  data && data.events && data.events.length > 0
   ?
   data.events[data.events.length - 1]
   :
@@ -125,7 +125,7 @@ const Page = () => {
     <footer className="row">
       <div className="col presta">
         <h3>Notre derniére prestation</h3>
-        {last && (
+        {last &&(
         <EventCard
           imageSrc={last?.cover}
           title={last?.title}
